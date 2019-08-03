@@ -32,7 +32,7 @@ type UUID [16]byte
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func GetUUID() (uuidHex string) {
-	uuid := NewUUID()
+	uuid, _ := NewUUID()
 	uuidHex = hex.EncodeToString(uuid[:])
 	return
 }
